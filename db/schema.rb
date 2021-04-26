@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_23_151850) do
+ActiveRecord::Schema.define(version: 2021_04_26_140946) do
 
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
@@ -62,6 +62,22 @@ ActiveRecord::Schema.define(version: 2021_04_23_151850) do
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
 
+  create_table "directions", force: :cascade do |t|
+    t.text "body"
+    t.integer "post_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["post_id"], name: "index_directions_on_post_id"
+  end
+
+  create_table "ingredients", force: :cascade do |t|
+    t.text "name"
+    t.integer "post_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["post_id"], name: "index_ingredients_on_post_id"
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "body"
@@ -69,8 +85,13 @@ ActiveRecord::Schema.define(version: 2021_04_23_151850) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "tagline"
     t.string "category"
+    t.string "pictures"
+    t.integer "servings"
+    t.string "preptime"
+    t.string "cooktime"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "directions", "posts"
 end

@@ -13,4 +13,6 @@ Turbolinks.start()
 ActiveStorage.start()
 
 require("trix")
+require("@nathanvda/cocoon")
 require("@rails/actiontext")
+require("jquery")

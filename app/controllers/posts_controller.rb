@@ -5,7 +5,7 @@ class PostsController < ApplicationController
 
   # Index action to render all posts
   def index
-    @posts = Post.all
+    @posts = Post.all.order(created_at: :desc)
   end
 
   # New action for creating post
@@ -59,7 +59,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :tagline, :category, :body)
+    params.require(:post).permit(:title, :tagline, :category, :body, :pictures, :servings, :preptime, :cooktime, ingredients_attributes:[:id, :name, :_destroy], directions_attributes:[:id, :body, :_destroy])
   end
 
   def find_post

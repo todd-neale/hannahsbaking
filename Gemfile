@@ -29,8 +29,9 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'simple_form'
 gem 'devise'
-gem 'filestack-rails', require: 'filestack-rails'
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'filepicker-rails'
+gem 'cocoon'
 
 
 group :development, :test do
