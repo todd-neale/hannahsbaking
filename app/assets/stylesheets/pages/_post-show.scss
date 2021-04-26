@@ -33,6 +33,12 @@ trix-editor {
    padding: 15px;
 }
 
+.recipe-card-image img {
+  width: 75vw;
+  height: 50vh;
+  object-fit: cover;
+}
+
 .recipe-card ul {
   list-style: none;
 }
