@@ -1,7 +1,11 @@
 <div class="col-xs-12 blog-content text-center container mt-3">
   <h2 class=" my-5"><%= @post.title %></h2>
   <div class="top-image">
-    <%= filepicker_image_tag @post.pictures %>
+    <% if @post.photo.attached? %>
+      <%= cl_image_tag @post.photo.key %>
+      <% else %>
+        <%= image_tag("cupcake.png") %>
+    <% end %>
   </div>
   <div class="d-flex justify-content-center my-3">
     <% if admin_signed_in? %>
@@ -14,8 +18,12 @@
 
   <!--recipe card-->
   <div class="recipe-card container mt-5">
-    <div class="recipe-card-image mt-5">
-      <%= filepicker_image_tag @post.pictures %>
+    <div class="recipe-card-image mt-4">
+      <% if @post.photo.attached? %>
+        <%= cl_image_tag @post.photo.key %>
+        <% else %>
+          <%= image_tag("cupcake.png") %>
+      <% end %>
     </div>
     <h2 class="text-center mt-3"><%= @post.title %></h2>
     <div class="stats my-3">

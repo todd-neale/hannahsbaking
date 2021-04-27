@@ -30,8 +30,8 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'simple_form'
 gem 'devise'
 gem 'dotenv-rails', groups: [:development, :test]
-gem 'filepicker-rails'
 gem 'cocoon'
+gem 'cloudinary'
 
 
 group :development, :test do

@@ -3,7 +3,11 @@
     <% @posts.each_with_index do |post, index| %>
      <% if index.even? %>
       <div class="card-product card-product-left my-3">
-        <%= filepicker_image_tag post.pictures %>
+        <% if post.photo.attached? %>
+          <%= cl_image_tag post.photo.key %>
+          <% else %>
+          <%= image_tag("cupcake.png") %>
+        <% end %>
         <div class="card-product-infos text-center">
           <h6><%= post.category %></h6>
           <h2><%= link_to post.title.upcase, post_path(post) %></h2>
@@ -13,7 +17,11 @@
       </div>
       <% else %>
         <div class="card-product card-product-right my-3">
-          <%= filepicker_image_tag post.pictures %>
+          <% if post.photo.attached? %>
+            <%= cl_image_tag post.photo.key %>
+            <% else %>
+            <%= image_tag("cupcake.png") %>
+          <% end %>
           <div class="card-product-infos text-center">
             <h6><%= post.category %></h6>
             <h2><%= link_to post.title.upcase, post_path(post) %></h2>

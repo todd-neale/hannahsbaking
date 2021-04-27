@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_26_140946) do
+ActiveRecord::Schema.define(version: 2021_04_27_104410) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -88,7 +88,7 @@ ActiveRecord::Schema.define(version: 2021_04_26_140946) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "tagline"
     t.string "category"
-    t.string "pictures"
+    t.string "photo"
     t.integer "servings"
     t.string "preptime"
     t.string "cooktime"

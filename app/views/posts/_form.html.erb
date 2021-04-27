@@ -1,4 +1,4 @@
-<%= filepicker_js_include_tag %>
+
 
 <%= simple_form_for @post do |f| %>
   <% if @post.errors.any? %>
@@ -21,8 +21,8 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :pictures, 'Upload a Picture:' %> <br>
-    <%= f.filepicker_field :pictures %>
+    <%= f.label :photo, 'Upload a Picture:' %> <br>
+    <%= f.input :photo, as: :file %>
   </div>
 
   <div class="form-group">

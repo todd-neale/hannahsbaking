@@ -1,5 +1,6 @@
 class Post < ApplicationRecord
   has_rich_text :body
+  has_one_attached :photo
 
   has_many :ingredients, dependent: :destroy
   accepts_nested_attributes_for :ingredients, reject_if: :all_blank, allow_destroy: true

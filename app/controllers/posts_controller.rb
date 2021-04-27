@@ -59,7 +59,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :tagline, :category, :body, :pictures, :servings, :preptime, :cooktime, ingredients_attributes:[:id, :name, :_destroy], directions_attributes:[:id, :body, :_destroy])
+    params.require(:post).permit(:title, :tagline, :category, :body, :photo, :recipe_photo, :servings, :preptime, :cooktime, ingredients_attributes:[:id, :name, :_destroy], directions_attributes:[:id, :body, :_destroy])
   end
 
   def find_post
