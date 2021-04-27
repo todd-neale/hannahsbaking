@@ -43,3 +43,21 @@
 .card-product-infos {
   flex: 2;
 }
+
+@media only screen and (max-width: 992px) {
+  .card-product {
+    flex-direction: column;
+  }
+  .card-product-right img {
+  order: 0;
+  }
+  .card-product img {
+  height: 33vh;
+  width: 100%;
+  object-fit: cover;
+  }
+  .card-product {
+  overflow: hidden;
+  height: auto;
+  }
+}
