@@ -5,7 +5,11 @@ class PostsController < ApplicationController
 
   # Index action to render all posts
   def index
-    @posts = Post.all.order(created_at: :desc)
+    if params[:query].present?
+      @posts = Post.where("title ILIKE ?", "%#{params[:query]}%")
+    else
+      @posts = Post.all.order(created_at: :desc)
+    end
   end
 
   # New action for creating post

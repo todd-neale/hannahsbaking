@@ -1,6 +1,6 @@
 .top-image img {
-  width: 75vw;
-  height: 50vh;
+  width: 75%;
+  height: 45vh;
   object-fit: cover;
 }
 
@@ -34,8 +34,8 @@ trix-editor {
 }
 
 .recipe-card-image img {
-  width: 75vw;
-  height: 50vh;
+  width: 100%;
+  height: 45vh;
   object-fit: cover;
 }
 
@@ -45,7 +45,7 @@ trix-editor {
 
 .stats {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .servings {
@@ -61,3 +61,23 @@ trix-editor {
   width: 300px;
   text-align: center;
 }
+
+.blog-content {
+  display: flex;
+  justify-content: center;
+}
+
+.blog-left {
+  width: 66%;
+}
+
+.blog-right {
+  width: 33%;
+  padding: 0 15px;
+}
+
+.form-inline div {
+  display: inline-block
+}
+
+
