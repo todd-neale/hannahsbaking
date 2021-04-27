@@ -17,6 +17,7 @@
 </div>
 
   <!--recipe card-->
+<% if @post.servings.present? %>
   <div class="recipe-card container mt-5">
     <div class="recipe-card-image mt-4">
       <% if @post.photo.attached? %>
@@ -59,4 +60,5 @@
         <% end %>
       </ol>
     </div>
-</div>
+  </div>
+<% end %>

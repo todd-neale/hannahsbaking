@@ -51,7 +51,7 @@
     <%= f.input :cooktime, class: "form-control" %>
   </div>
 
-  <h5>Add Ingredients</h5>
+  <h5><strong>Add Ingredients</strong></h5>
   <div class="form-group">
     <%= link_to_add_association "Add New Ingredient", f, :ingredients %>
     <%= f.fields_for :ingredients do |ingredient| %>
@@ -59,7 +59,7 @@
     <% end %>
   </div>
 
-  <h5>Add Method</h5>
+  <h5><strong>Add Method</strong></h5>
   <div class="form-group">
     <%= link_to_add_association "Add New Step", f, :directions %>
     <%= f.fields_for :directions do |direction| %>
