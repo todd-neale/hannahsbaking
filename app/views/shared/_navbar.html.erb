@@ -30,10 +30,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li><%= link_to 'Home', root_path, class: "nav-link mx-4" %></li>
-        <li><%= link_to 'Cakes', root_path, class: "nav-link mx-4" %></li>
-        <li><%= link_to 'Pastry', root_path, class: "nav-link mx-4" %></li>
-        <li><%= link_to 'Cookies', root_path, class: "nav-link mx-4" %></li>
-        <li><%= link_to 'Other', root_path, class: "nav-link mx-4" %></li>
+        <li><%= link_to 'Cakes', root_path(:category=>"Cakes"), class: "nav-link mx-4" %></li>
+        <li><%= link_to 'Pastry', root_path(:category=>"Pastry"), class: "nav-link mx-4" %></li>
+        <li><%= link_to 'Cookies', root_path(:category=>"Cookies"), class: "nav-link mx-4" %></li>
+        <li><%= link_to 'Other', root_path(:category=>"Other"), class: "nav-link mx-4" %></li>
         <li><%= link_to 'About', root_path, class: "nav-link mx-4" %></li>
       </ul>
     </div>

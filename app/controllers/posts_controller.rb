@@ -7,6 +7,8 @@ class PostsController < ApplicationController
   def index
     if params[:query].present?
       @posts = Post.where("title ILIKE ?", "%#{params[:query]}%")
+    elsif params[:category]
+      @posts = Post.where(:category => params[:category])
     else
       @posts = Post.all.order(created_at: :desc)
     end
