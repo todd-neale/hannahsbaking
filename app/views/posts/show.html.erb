@@ -67,7 +67,7 @@
 
   <div class="blog-right ml-3">
     <div class="search text-center mt-5">
-      <h6>SEARCH</h6>
+      <h5>SEARCH</h5>
       <%= form_tag posts_path, class: "form-inline justify-content-center", method: :get do %>
         <%= text_field_tag :query,
           params[:query],
@@ -79,8 +79,22 @@
     </div>
 
     <div class="instagram text-center mt-5">
-      <h6>INSTAGRAM</h6>
+      <h5>INSTAGRAM</h5>
 
+    </div>
+
+    <div class="popular text-center mt-5">
+      <h5>POPULAR POSTS</h5>
+      <% @posts.first(3).each do |post| %>
+        <div class="popular-card">
+          <% if post.photo.attached? %>
+            <%= cl_image_tag post.photo.key %>
+            <% else %>
+              <%= image_tag("cupcake.png") %>
+          <% end %>
+          <h6 class="mt-2"><%= link_to post.title.upcase, post_path(post) %></h6>
+        </div>
+      <% end %>
     </div>
 
   </div>

@@ -47,6 +47,7 @@ class PostsController < ApplicationController
 
   # The show action renders the individual post after retrieving the the id
   def show
+    @posts = Post.all.order(created_at: :desc)
   end
 
   # The destroy action removes the post permanently from the database
