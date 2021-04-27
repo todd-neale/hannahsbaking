@@ -66,18 +66,22 @@
   </div>
 
   <div class="blog-right ml-3">
+    <div class="search text-center mt-5">
+      <h6>SEARCH</h6>
+      <%= form_tag posts_path, class: "form-inline justify-content-center", method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find a recipe"
+        %>
+        <%= submit_tag "Search", class: "btn btn-light ml-2" %>
+      <% end %>
+    </div>
 
-    <h4 class="mt-5">Search</h4>
-    <%= form_tag posts_path, class: "form-inline justify-content-center", method: :get do %>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "Find a recipe"
-      %>
-      <%= submit_tag "Search", class: "btn btn-light ml-2" %>
-    <% end %>
+    <div class="instagram text-center mt-5">
+      <h6>INSTAGRAM</h6>
 
-    <h4 class="mt-5">Instagram</h4>
+    </div>
 
   </div>
 </div>
