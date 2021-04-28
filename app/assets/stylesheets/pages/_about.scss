@@ -17,3 +17,10 @@
   align-items: top;
   flex-direction: row;
 }
+
+.account-buttons {
+  display: flex;
+  flex: wrap;
+  justify-content: space-around;
+
+}
