@@ -32,6 +32,7 @@ gem 'devise'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cocoon'
 gem 'cloudinary'
+gem 'instagram_basic_display'
 
 
 group :development, :test do
