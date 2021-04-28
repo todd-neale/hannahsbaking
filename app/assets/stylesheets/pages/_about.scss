@@ -1,0 +1,19 @@
+.aboutme {
+  text-align: center;
+}
+
+.aboutme img {
+  width: 45vw;
+  height: auto;
+  object-fit: contain;
+}
+
+
+.about {
+  text-align: center;
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  align-items: top;
+  flex-direction: row;
+}
