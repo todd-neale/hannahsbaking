@@ -1,7 +1,7 @@
 <div class="blog-content container">
   <div class="blog-left">
-    <div class="text-center container mt-3">
-      <h2 class=" my-5"><%= @post.title %></h2>
+    <div class="text-center container mt-5">
+      <h2 class=" my-3"><%= @post.title %></h2>
       <div class="top-image">
         <% if @post.photo.attached? %>
           <%= cl_image_tag @post.photo.key %>
