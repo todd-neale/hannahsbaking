@@ -1,9 +1,39 @@
   <div class="about">
     <div class="container mt-3 aboutme">
-      <h1 class="my-3">About Me</h1>
-      <%= image_tag("cupcake.png") %>
-      <p class="mt-5">
-        My name is Hannah, and I’m a plant based recipe developer and food photographer. I fell in love with being in the kitchen nearly 2 years ago, when I adapted my lifestyle to being plant based. My hobby has turned into my career, and I now spend every day creating delicious vegan recipes both sweet and savoury, for all to enjoy. The aim of WhatLuceEats is to show that following a plant based diet is not flavourless, but in fact, full of deliciousness and variety.
-      </p>
+      <div class="blog-left">
+        <div class="container mt-3">
+          <h1 class="my-3">About Me</h1>
+          <%= image_tag("cupcake.png") %>
+          <p class="mt-5">
+            My name is Hannah, and I’m a plant based recipe developer and food photographer. I fell in love with being in the kitchen nearly 2 years ago, when I adapted my lifestyle to being plant based. My hobby has turned into my career, and I now spend every day creating delicious vegan recipes both sweet and savoury, for all to enjoy. The aim of WhatLuceEats is to show that following a plant based diet is not flavourless, but in fact, full of deliciousness and variety.
+          </p>
+        </div>
+      </div>
+      <div class="blog-right">
+        <div class="search text-center mt-5">
+          <h5>SEARCH</h5>
+          <%= form_tag posts_path, class: "form-inline justify-content-center", method: :get do %>
+            <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Find a recipe"
+            %>
+            <%= submit_tag "Search", class: "btn btn-light ml-2 mobile-none" %>
+          <% end %>
+        </div>
+
+    <!-- <div class="instagram text-center mt-5">
+          <h5>INSTAGRAM</h5>
+        </div> -->
+        <div class="instagram text-center mt-5">
+          <h5>SOCIALS</h5>
+          <div class="socials-links justify-content-center">
+            <a href="https://www.instagram.com/hannahshomemades_/"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
