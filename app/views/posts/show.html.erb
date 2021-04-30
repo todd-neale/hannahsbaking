@@ -63,6 +63,22 @@
           </div>
         </div>
       <% end %>
+      <div class="next-previous">
+        <div class="previous">
+          <h5>
+            <% if @post.prev %>
+              <%= link_to "< Previous Post", @post.prev %>
+            <% end %>
+          </h5>
+        </div>
+        <div class="next">
+          <h5>
+            <% if @post.next %>
+              <%= link_to "Next Post >", @post.next %>
+            <% end %>
+          </h5>
+        </div>
+      </div>
   </div>
 
   <div class="blog-right ml-3">
@@ -78,9 +94,16 @@
       <% end %>
     </div>
 
-    <div class="instagram text-center mt-5">
+<!-- <div class="instagram text-center mt-5">
       <h5>INSTAGRAM</h5>
-        <div id="instafeed" class="instagram-gallery-medium"></div>
+    </div> -->
+    <div class="instagram text-center mt-5">
+      <h5>SOCIALS</h5>
+      <div class="socials-links justify-content-center">
+        <a href="https://www.instagram.com/hannahshomemades_/"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+      </div>
     </div>
 
     <div class="popular text-center mt-5">

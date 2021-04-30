@@ -101,6 +101,55 @@ trix-editor {
   object-fit: cover;
 }
 
+.socials-links {
+  display: flex;
+  align-items: center;
+}
+
+.socials-links a {
+  color: grey;
+  opacity: 0.85;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+
+.socials-links a:hover {
+  opacity: 1;
+}
+
+.next-previous {
+  display: flex;
+  margin: 20px;
+  justify-content: space-between;
+}
+
+.carousel-caption {
+  background-color: rgba(245,245,245 ,0.7 );
+  color: black;
+}
+
+.show-page-images {
+  .carousel-inner {
+      overflow: hidden;
+      height: 500px;
+      width: 100%;
+
+    img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    .carousel-inner {
+      width: auto;
+      height: 310px;
+    }
+  }
+}
+
 @media only screen and (max-width: 992px) {
   .blog-content {
     flex-direction: column;

@@ -12,4 +12,12 @@ class Post < ApplicationRecord
   validates :title, presence: true, length: {maximum: 140}
   #This validates presence of body
   validates :body, presence: true
+
+  def next
+    Post.where("id > ?", id).order(id: :asc).limit(1).first
+  end
+
+  def prev
+       Post.where("id < ?", id).order(id: :desc).limit(1).first
+  end
 end
