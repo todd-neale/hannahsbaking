@@ -33,6 +33,8 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'cocoon'
 gem 'cloudinary'
 gem 'instagram_basic_display'
+gem 'font-awesome-sass', '~> 5.15.1'
+
 
 
 group :development, :test do

@@ -1,5 +1,7 @@
 @import "bootstrap/scss/bootstrap"; /* picks it up in node_modules! */
 @import "./actiontext.scss";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 // Your CSS partials
 @import "components/index";
