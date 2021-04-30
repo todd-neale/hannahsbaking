@@ -23,5 +23,10 @@
   display: flex;
   flex: wrap;
   justify-content: space-around;
+}
 
+@media only screen and (max-width: 992px) {
+  .aboutme {
+    flex-direction: column;
+  }
 }
