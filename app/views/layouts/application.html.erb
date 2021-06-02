@@ -13,22 +13,9 @@
   </head>
 
   <body>
+    <%= render "./shared/navbar" %>
     <%= render './shared/flashes' %>
-    <div class="navbar-container"><%= render "./shared/navbar" %></div>
     <%= yield %>
     <%= render "shared/footer" %>
   </body>
-  <script src="../../javascript/packs/FCInstagram.js"></script>
-    <script>
-    jQuery.fn.FCInstagram.accessData = {
-        accessToken: "IGQVJVWkJwMnphcE9rX1hodGdYX0ItaW53ekJfNnFvQ1ZAwTDA2c0VGVlVnX04ySWUxM0lCWnNvX2FYakd6SWNWMExtYm1QWWh2ZA2pEYnR1eDlxTmZApMVNoenA5eGhnaVlxbFRJeXF6SmFNN1VYb3FUZAQZDZD", // Token
-    };
-    $('#instafeed').FCInstagram({
-        max: 9, // A number between 1 and 25 of photos to show. Default: 9
-        autoplay: true, // Set autoplay video: true/false. Default: false
-        complete: function () { // A callback function to execute after the display of the photos.
-            console.log('completed');
-        }
-    });
-    </script>
 </html>
