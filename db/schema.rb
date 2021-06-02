@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_27_104410) do
+ActiveRecord::Schema.define(version: 2021_06_02_152658) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,6 +65,17 @@ ActiveRecord::Schema.define(version: 2021_04_27_104410) do
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
 
+  create_table "comments", force: :cascade do |t|
+    t.text "content"
+    t.string "name"
+    t.string "email"
+    t.boolean "mail_list"
+    t.bigint "post_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["post_id"], name: "index_comments_on_post_id"
+  end
+
   create_table "directions", force: :cascade do |t|
     t.text "body"
     t.bigint "post_id", null: false
@@ -92,9 +103,21 @@ ActiveRecord::Schema.define(version: 2021_04_27_104410) do
     t.integer "servings"
     t.string "preptime"
     t.string "cooktime"
+    t.boolean "published"
+    t.integer "rating", default: 0, null: false
+  end
+
+  create_table "ratings", force: :cascade do |t|
+    t.integer "rating"
+    t.bigint "post_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["post_id"], name: "index_ratings_on_post_id"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "comments", "posts"
   add_foreign_key "directions", "posts"
+  add_foreign_key "ratings", "posts"
 end
